@@ -1,0 +1,46 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.game-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.game-card img {
+    width: 100%;
+}
+
+.game-card .info {
+    padding: 15px;
+}
+
+.game-card .info h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.game-card .info p {
+    margin: 5px 0 0;
+}

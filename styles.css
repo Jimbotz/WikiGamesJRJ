@@ -1,24 +1,38 @@
+:root {
+  --text-color-white: #fff;
+  --text-color-grey: #333;
+  --bg-color-white: #f4f4f4;
+  --bg-color-blue: #35424a;
+  --bg-color-card: #1e1e1e;
+}
+
+.text{
+  color: var(--text-color-grey)
+}
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: var(--bg-color-white);
+  color: var(--text-color-white);
 }
+
 header {
-  background: #35424a;
-  color: #ffffff;
+  background: var(--bg-color-blue);
+  color: var(--bg-color-white);
   padding: 10px 0;
   text-align: center;
 }
 nav {
   display: flex;
   justify-content: center;
-  background: #35424a;
+  background: var(--bg-color-blue);
   padding: 10px 0;
 }
 nav a {
-  color: #ffffff;
+  color: var(--bg-color-white);
   text-decoration: none;
   margin: 0 15px;
 }
@@ -29,18 +43,109 @@ main {
   padding: 20px;
   max-width: 900px;
   margin: 0 auto;
-  background: #ffffff;
+  background: var(--bg-color-white);
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 footer {
-  background: #35424a;
-  color: #ffffff;
+  background: var(--bg-color-blue);
+  color: var(--text-color-white);
   text-align: center;
   padding: 10px 0;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
 .content {
   margin-bottom: 20px;
 }
+
+/*API*/
+.container {
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.games-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.game-card {
+  background-color: var(--bg-color-card);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.game-card img {
+  width: 100%;
+}
+
+.game-card .info {
+  padding: 15px;
+}
+
+.game-card .info h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.game-card .info p {
+  margin: 5px 0 0;
+}
+
+
+
+/*
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.game-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.game-card img {
+    width: 100%;
+}
+
+.game-card .info {
+    padding: 15px;
+}
+
+.game-card .info h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.game-card .info p {
+    margin: 5px 0 0;
+}
+*/

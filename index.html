@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./connectAPI.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenidos a Mi Página</h1>
+    </header>
 
-</head>
-<body>
-    
-<header>
-    <h1>Bienvenidos a Mi Página</h1>
-</header>
+    <nav>
+      <a href="#home">Inicio</a>
+      <a href="#about">Sobre Nosotros</a>
+      <a href="#services">Servicios</a>
+      <a href="#contact">Contacto</a>
+    </nav>
 
-<nav>
-    <a href="#home">Inicio</a>
-    <a href="#about">Sobre Nosotros</a>
-    <a href="#services">Servicios</a>
-    <a href="#contact">Contacto</a>
-</nav>
-
-<main>
-    <article>
+    <main class="text">
+      <article>
         <h2>Título del Artículo</h2>
-        <p class="content">Este es el contenido de un artículo en nuestra página. Aquí puedes escribir sobre cualquier tema que desees.</p>
-    </article>
-    
-    <div class="content">
+        <p class="content">
+          Este es el contenido de un artículo en nuestra página. Aquí puedes
+          escribir sobre cualquier tema que desees.
+        </p>
+      </article>
+
+      <div class="content">
         <h3>Sección Adicional</h3>
         <p>Esta es una sección adicional donde puedes agregar más contenido.</p>
-    </div>
-    
-    <div class="content">
+      </div>
+
+      <div class="content">
         <h3>Otra Sección</h3>
         <p>Otra sección de contenido para mostrar más información.</p>
+      </div>
+    </main>
+
+    <h1 class="text">Datos de la API</h1>
+    <div class="container">
+      <h1 class="text">Juegos más populares</h1>
+      <div id="games" class="games-grid"></div>
     </div>
-</main>
-
-<footer>
-    <p>&copy; 2024 Mi Página. Todos los derechos reservados.</p>
-</footer>
-
-
-</body>
+    
+    <footer>
+      <p>&copy; 2024 Mi Página. Todos los derechos reservados.</p>
+    </footer>
+  </body>
 </html>
