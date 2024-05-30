@@ -1,5 +1,5 @@
 const apiKey = '28930bc8bbca4bb49c075a2cbfdd5e7c';
-const apiUrl = `https://api.rawg.io/api/games?key=${apiKey}&page=1`;
+const apiUrl = 'https://api.rawg.io/api/games?key=${apiKey}&page=1';
 
 async function fetchGames() {
     try {
@@ -35,6 +35,8 @@ function displayGames(games) {
         
         gameCard.appendChild(gameInfo);
         gamesContainer.appendChild(gameCard);
+        
+        gameCard.addEventListener('click', () => showGameModal(game));
     });
 }
 
@@ -46,6 +48,26 @@ function getStarRating(rating) {
     return '<i class="fas fa-star"></i>'.repeat(fullStars) + 
            (halfStar ? '<i class="fas fa-star-half-alt"></i>' : '') + 
            '<i class="far fa-star"></i>'.repeat(emptyStars);
+}
+
+function showGameModal(game) {
+    const modal = document.getElementById('gameModal');
+    document.getElementById('modalTitle').textContent = game.name;
+    document.getElementById('modalImage').src = game.background_image;
+    document.getElementById('modalDescription').textContent = game.description_raw || "No description available.";
+
+    modal.style.display = "block";
+
+    const closeButton = document.getElementsByClassName('close')[0];
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
 }
 
 document.addEventListener('DOMContentLoaded', fetchGames);
