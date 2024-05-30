@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
-    <link rel="stylesheet" href="styles.css" />
     <script src="./connectAPI.js"></script>
+    
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <header class = "text">
@@ -46,11 +51,11 @@
       <div id="games" class="games-grid"></div>
     </div>
 
-    <div id="gameModal" class="modal">
+    <div id="gameModal" class="modal animate__animated animate__fadeInDown">
       <div class="modal-content">
           <span class="close">&times;</span>
           <h2 id="modalTitle"></h2>
-          <img id="modalImage" src="" alt="Game Image">
+          <img id="modalImage" src="" alt="Game Image" class="modalImg">
           <p id="modalDescription"></p>
       </div>
     </div>

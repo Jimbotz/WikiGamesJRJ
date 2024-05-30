@@ -80,6 +80,7 @@ h1 {
   border-radius: 10px;
   overflow: hidden;
   width: 300px;
+  cursor: pointer;
 }
 
 .game-card img {
@@ -125,6 +126,10 @@ h1 {
   color: #ffffff;
 }
 
+.modalImg{
+  width: 500px;
+}
+
 .close {
   color: #aaa;
   float: right;
@@ -138,3 +143,6 @@ h1 {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+/*Animaciones*/

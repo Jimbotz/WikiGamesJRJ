@@ -36,7 +36,7 @@ function displayGames(games) {
         gameCard.appendChild(gameInfo);
         gamesContainer.appendChild(gameCard);
         
-        gameCard.addEventListener('click', () => showGameModal(game));
+        gameCard.addEventListener('click', () => showGameModal(game.id));
     });
 }
 
@@ -50,13 +50,21 @@ function getStarRating(rating) {
            '<i class="far fa-star"></i>'.repeat(emptyStars);
 }
 
-function showGameModal(game) {
+async function showGameModal(gameId) {
     const modal = document.getElementById('gameModal');
-    document.getElementById('modalTitle').textContent = game.name;
-    document.getElementById('modalImage').src = game.background_image;
-    document.getElementById('modalDescription').textContent = game.description_raw || "No description available.";
 
-    modal.style.display = "block";
+    try {
+        const response = await fetch(`https://api.rawg.io/api/games/${gameId}?key=${apiKey}`);
+        const game = await response.json();
+        
+        document.getElementById('modalTitle').textContent = game.name;
+        document.getElementById('modalImage').src = game.background_image;
+        document.getElementById('modalDescription').textContent = game.description_raw || "No description available.";
+
+        modal.style.display = "block";
+    } catch (error) {
+        console.error('Error fetching game details:', error);
+    }
 
     const closeButton = document.getElementsByClassName('close')[0];
     closeButton.onclick = function() {
