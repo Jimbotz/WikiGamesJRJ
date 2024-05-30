@@ -1,5 +1,5 @@
 const apiKey = '28930bc8bbca4bb49c075a2cbfdd5e7c';
-const apiUrl = 'https://api.rawg.io/api/games?key=${apiKey}&page=1';
+const apiUrl = `https://api.rawg.io/api/games?key=${apiKey}&page=1`;
 
 async function fetchGames() {
     try {
