@@ -7,7 +7,7 @@ async function fetchGames() {
         const data = await response.json();
         displayGames(data.results);
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error fetching the games:', error);
     }
 }
 
@@ -28,13 +28,24 @@ function displayGames(games) {
         gameTitle.textContent = game.name;
         gameInfo.appendChild(gameTitle);
         
-        const gameRating = document.createElement('p');
-        gameRating.textContent = `Calificacion: ${game.rating} de 5.00`;
+        const gameRating = document.createElement('div');
+        gameRating.classList.add('stars');
+        gameRating.innerHTML = getStarRating(game.rating);
         gameInfo.appendChild(gameRating);
         
         gameCard.appendChild(gameInfo);
         gamesContainer.appendChild(gameCard);
     });
+}
+
+function getStarRating(rating) {
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5 ? 1 : 0;
+    const emptyStars = 5 - fullStars - halfStar;
+
+    return '<i class="fas fa-star"></i>'.repeat(fullStars) + 
+           (halfStar ? '<i class="fas fa-star-half-alt"></i>' : '') + 
+           '<i class="far fa-star"></i>'.repeat(emptyStars);
 }
 
 document.addEventListener('DOMContentLoaded', fetchGames);
