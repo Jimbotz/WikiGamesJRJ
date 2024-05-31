@@ -5,6 +5,18 @@
     <title>Wiki Games Recommendations</title>
     <link rel="stylesheet" href="header.css" />
     <script src="./routeo.js"></script>
+    <style>
+      .splide__slide img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#image-carousel').mount();
+      });
+    </script>
+
   </head>
   <body>
     <header class="text">
@@ -33,8 +45,24 @@
       </div>
 
       <div class="content">
-        <h3>Otra Sección</h3>
-        <p>Otra sección de contenido para mostrar más información.</p>
+        <h3>Recomendaciones developer (Rodrigo)</h3>
+        <h4>Rocket League</h4>
+        <p>Rocket League se a convertido en uno de los juegos de autos mas conocidos al rededor del mundo.</p>
+        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="https://cdn.mos.cms.futurecdn.net/ySfXgE9tGxYotNvhTopj9U-1200-80.jpg" alt="Image 1">
+              </li>
+              <li class="splide__slide">
+                <img src="https://th.bing.com/th/id/OIP.y4-wg_UENm_IOHlLhjcKSQHaEK?rs=1&pid=ImgDetMain" alt="Image 2">
+              </li>
+              <li class="splide__slide">
+                <img src="https://www.viaxesports.com/wp-content/uploads/2020/09/EhaUJEwU8AAHB1c.jpg" alt="Image 3">
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </main>
   </body>
