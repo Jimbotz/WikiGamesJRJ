@@ -54,11 +54,15 @@ async function showGameModal(gameId) {
     const modal = document.getElementById('gameModal');
 
     try {
-        const response = await fetch(`https://api.rawg.io/api/games/${gameId}?key=${apiKey}`);
-        const game = await response.json();
+        const [gameResponse, screenshotsResponse] = await Promise.all([
+            fetch(`https://api.rawg.io/api/games/${gameId}?key=${apiKey}`),
+            fetch(`https://api.rawg.io/api/games/${gameId}/screenshots?key=${apiKey}`)
+        ]);
+
+        const game = await gameResponse.json();
+        const screenshots = await screenshotsResponse.json();
         
         document.getElementById('modalTitle').textContent = game.name;
-        document.getElementById('modalImage').src = game.background_image;
         document.getElementById('modalDescription').textContent = game.description_raw || "No description available.";
 
         // Obtener y mostrar las plataformas
@@ -71,6 +75,31 @@ async function showGameModal(gameId) {
             platformsList.appendChild(platformItem);
         });
         modalPlatforms.appendChild(platformsList);
+
+        // Imagenes
+        const carouselImages = document.getElementById('carousel-images');
+        carouselImages.innerHTML = ''; // Limpiar carrusel anterior
+        const libg = document.createElement('li');
+        libg.classList.add('splide__slide');
+        const img = document.createElement('img');
+        img.src = game.background_image;
+        libg.appendChild(img);
+        carouselImages.appendChild(libg);
+
+        screenshots.results.forEach(screenshot => {
+            const li = document.createElement('li');
+            li.classList.add('splide__slide');
+            const img = document.createElement('img');
+            img.src = screenshot.image;
+            li.appendChild(img);
+            carouselImages.appendChild(li);
+        });
+
+        // Inicializar el carrusel después de agregar las imágenes
+        if (window.splideInstance) {
+            window.splideInstance.destroy(true);  // Destruir la instancia existente
+        }
+        window.splideInstance = new Splide('#image-carousel').mount();
 
         modal.style.display = "block";
     } catch (error) {

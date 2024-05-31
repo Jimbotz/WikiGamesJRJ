@@ -15,6 +15,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
   </head>
   <body>
     <header class="text">
@@ -57,15 +62,37 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2 id="modalTitle"></h2>
+        <!-- 
         <img id="modalImage" src="" alt="Game Image" class="modalImg" />
+        -->
+        <section
+          id="image-carousel"
+          class="splide"
+          aria-label="Beautiful Images"
+        >
+          <div class="splide__track">
+            <ul id="carousel-images" class="splide__list">
+              <!-- imgs -->
+            </ul>
+          </div>
+        </section>
+
         <p id="modalDescription"></p>
         <div id="modalPlatforms"></div>
-        <!-- Nuevo contenedor para plataformas -->
+        <!-- Agregar el carrusel aquí -->
       </div>
     </div>
 
     <footer>
       <p>&copy; 2024 Mi Página. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#image-carousel").mount();
+      });
+    </script>
   </body>
 </html>
