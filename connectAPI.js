@@ -61,6 +61,17 @@ async function showGameModal(gameId) {
         document.getElementById('modalImage').src = game.background_image;
         document.getElementById('modalDescription').textContent = game.description_raw || "No description available.";
 
+        // Obtener y mostrar las plataformas
+        const modalPlatforms = document.getElementById('modalPlatforms');
+        modalPlatforms.innerHTML = "<h3>Plataformas:</h3>";
+        const platformsList = document.createElement('ul');
+        game.platforms.forEach(platformInfo => {
+            const platformItem = document.createElement('li');
+            platformItem.textContent = platformInfo.platform.name;
+            platformsList.appendChild(platformItem);
+        });
+        modalPlatforms.appendChild(platformsList);
+
         modal.style.display = "block";
     } catch (error) {
         console.error('Error fetching game details:', error);

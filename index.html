@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
     <script src="./connectAPI.js"></script>
-    
+
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
   <body>
-    <header class = "text">
+    <header class="text">
       <h1>Wiki games JRJ</h1>
     </header>
 
     <nav>
-      <a class = "text" href="#home">Inicio</a>
-      <a class = "text" href="#about">GENEROS</a>
-      <a class = "text" href="#services">Recomendaciones</a>
-      <a class = "text" href="#contact">Buscar</a>
+      <a class="text" href="#home">Inicio</a>
+      <a class="text" href="#about">GENEROS</a>
+      <a class="text" href="#services">Recomendaciones</a>
+      <a class="text" href="#contact">Buscar</a>
     </nav>
 
     <main class="text">
@@ -45,18 +48,19 @@
       </div>
     </main>
 
-    
     <div class="container">
       <h1 class="text">Juegos más populares</h1>
       <div id="games" class="games-grid"></div>
     </div>
 
-    <div id="gameModal" class="modal animate__animated animate__fadeInDown">
+    <div id="gameModal" class="modal">
       <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2 id="modalTitle"></h2>
-          <img id="modalImage" src="" alt="Game Image" class="modalImg">
-          <p id="modalDescription"></p>
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" src="" alt="Game Image" class="modalImg" />
+        <p id="modalDescription"></p>
+        <div id="modalPlatforms"></div>
+        <!-- Nuevo contenedor para plataformas -->
       </div>
     </div>
 
