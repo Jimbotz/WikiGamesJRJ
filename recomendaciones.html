@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wiki Games Recommendations</title>
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Splide/3.6.9/css/splide.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
   <style>
     .splide__slide img {
       width: 100%;
@@ -47,13 +47,13 @@
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
-              <img src="https://cdn.mos.cms.futurecdn.net/ySfXgE9tGxYotNvhTopj9U-1200-80.jpg" alt="Image 1">
+              <img src="https://cdn.mos.cms.futurecdn.net/ySfXgE9tGxYotNvhTopj9U-1200-80.jpg" alt="Imagen 1">
             </li>
             <li class="splide__slide">
-              <img src="https://th.bing.com/th/id/OIP.y4-wg_UENm_IOHlLhjcKSQHaEK?rs=1&pid=ImgDetMain" alt="Image 2">
+              <img src="https://www.viaxesports.com/wp-content/uploads/2020/09/EhaUJEwU8AAHB1c.jpg" alt="Imagen 2">
             </li>
             <li class="splide__slide">
-              <img src="https://www.viaxesports.com/wp-content/uploads/2020/09/EhaUJEwU8AAHB1c.jpg" alt="Image 3">
+              <img src="https://cdn.atomix.vg/wp-content/uploads/2017/06/rocket-league-aniversario-1024x436.jpg" alt="Imagen 3">
             </li>
           </ul>
         </div>
@@ -61,9 +61,7 @@
     </div>
   </main>
 
-  <!-- Incluye los scripts al final del body para asegurar que el DOM esté cargado -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Splide/3.6.9/js/splide.min.js"></script>
-  <script src="./routeo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       new Splide('#image-carousel').mount();
