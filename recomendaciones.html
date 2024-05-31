@@ -1,71 +1,73 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wiki Games Recommendations</title>
-    <link rel="stylesheet" href="header.css" />
-    <script src="./routeo.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Splide/3.6.9/css/splide.min.css">
-    <style>
-      .splide__slide img {
-        width: 100%;
-        height: auto;
-      }
-    </style>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        new Splide('#image-carousel').mount();
-      });
-    </script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiki Games Recommendations</title>
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Splide/3.6.9/css/splide.min.css">
+  <style>
+    .splide__slide img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header class="text">
+    <h1>Wiki games JRJ</h1>
+  </header>
 
-  </head>
-  <body>
-    <header class="text">
-      <h1>Wiki games JRJ</h1>
-    </header>
+  <nav>
+    <a class="text nav-link" href="index.html">Inicio</a>
+    <a class="text nav-link" href="generos.html">GENEROS</a>
+    <a class="text nav-link" href="#home">Recomendaciones</a>
+    <a class="text nav-link" href="buscar.html">Buscar</a>
+  </nav>
 
-    <nav>
-      <a class="text nav-link" href="index.html">Inicio</a>
-      <a class="text nav-link" href="generos.html">GENEROS</a>
-      <a class="text nav-link" href="#home">Recomendaciones</a>
-      <a class="text nav-link" href="buscar.html">Buscar</a>
-    </nav>
+  <main class="text">
+    <article>
+      <h2>Título del Artículo</h2>
+      <p class="content">
+        Este es el contenido de un artículo en nuestra página. Aquí puedes
+        escribir sobre cualquier tema que desees.
+      </p>
+    </article>
 
-    <main class="text">
-      <article>
-        <h2>Título del Artículo</h2>
-        <p class="content">
-          Este es el contenido de un artículo en nuestra página. Aquí puedes
-          escribir sobre cualquier tema que desees.
-        </p>
-      </article>
+    <div class="content">
+      <h3>Sección Adicional</h3>
+      <p>Esta es una sección adicional donde puedes agregar más contenido.</p>
+    </div>
 
-      <div class="content">
-        <h3>Sección Adicional</h3>
-        <p>Esta es una sección adicional donde puedes agregar más contenido.</p>
-      </div>
+    <div class="content">
+      <h3>Recomendaciones developer (Rodrigo)</h3>
+      <h4>Rocket League</h4>
+      <p>Rocket League se a convertido en uno de los juegos de autos mas conocidos al rededor del mundo.</p>
+      <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="https://cdn.mos.cms.futurecdn.net/ySfXgE9tGxYotNvhTopj9U-1200-80.jpg" alt="Image 1">
+            </li>
+            <li class="splide__slide">
+              <img src="https://th.bing.com/th/id/OIP.y4-wg_UENm_IOHlLhjcKSQHaEK?rs=1&pid=ImgDetMain" alt="Image 2">
+            </li>
+            <li class="splide__slide">
+              <img src="https://www.viaxesports.com/wp-content/uploads/2020/09/EhaUJEwU8AAHB1c.jpg" alt="Image 3">
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
 
-      <div class="content">
-        <h3>Recomendaciones developer (Rodrigo)</h3>
-        <h4>Rocket League</h4>
-        <p>Rocket League se a convertido en uno de los juegos de autos mas conocidos al rededor del mundo.</p>
-        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <img src="https://cdn.mos.cms.futurecdn.net/ySfXgE9tGxYotNvhTopj9U-1200-80.jpg" alt="Image 1">
-              </li>
-              <li class="splide__slide">
-                <img src="https://th.bing.com/th/id/OIP.y4-wg_UENm_IOHlLhjcKSQHaEK?rs=1&pid=ImgDetMain" alt="Image 2">
-              </li>
-              <li class="splide__slide">
-                <img src="https://www.viaxesports.com/wp-content/uploads/2020/09/EhaUJEwU8AAHB1c.jpg" alt="Image 3">
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Splide/3.6.9/js/splide.min.js"></script>
-  </body>
+  <!-- Incluye los scripts al final del body para asegurar que el DOM esté cargado -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Splide/3.6.9/js/splide.min.js"></script>
+  <script src="./routeo.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#image-carousel').mount();
+    });
+  </script>
+</body>
 </html>
