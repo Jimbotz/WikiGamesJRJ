@@ -8,15 +8,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
   <style>
     #image-carousel {
-      max-width: 600px; 
+      max-width: 1000px; 
       margin: 0 auto; 
       text-align: center; 
-
+    }
     .splide__slide img {
-      width: 100%;
+      width: auto;
       height: auto; 
-      max-width: 450px; 
-      max-height: 350px;
+      max-width: 100%; 
+      max-height: 100%;
+    }
+
+    /* Estilo para centrar el segundo carrusel */
+    #image-carousel2 {
+      max-width: 1000px; 
+      margin: 0 auto; 
+      text-align: center;
+    }
+    .splide__track img {
+      width: auto;
+      height: auto; 
+      max-width: 100%; 
+      max-height: 100%;
     }
   </style>
 </head>
@@ -42,15 +55,30 @@
     </article>
 
     <div class="content">
-      <h3>Sección Adicional</h3>
+      <h3>Recomendaciones developer (Toño)</h3>
       <p>Esta es una sección adicional donde puedes agregar más contenido.</p>
+      <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="https://cdn.wccftech.com/wp-content/uploads/2024/05/WCCFsenuassagahellblade27.jpg" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="image02.jpg" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="image03.jpg" alt="">
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
 
     <div class="content">
       <h3>Recomendaciones developer (Rodrigo)</h3>
       <h4>Rocket League</h4>
       <p>Rocket League se a convertido en uno de los juegos de autos mas conocidos al rededor del mundo.</p>
-      <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+      <section id="image-carousel2" class="splide" aria-label="Beautiful Images">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
@@ -72,6 +100,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       new Splide('#image-carousel').mount();
+      new Splide('#image-carousel2').mount();
     });
   </script>
 </body>
