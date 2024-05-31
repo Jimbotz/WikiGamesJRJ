@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wiki Games</title>
     <script src="./connectAPI.js"></script>
+    <script src="./routeo.js"></script>
+    <script src="./carrusel.js"></script>
 
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="header.css" />
@@ -28,10 +30,10 @@
     </header>
 
     <nav>
-      <a class="text" href="#home">Inicio</a>
-      <a class="text" href="generos.html">GENEROS</a>
-      <a class="text" href="recomendaciones.html">Recomendaciones</a>
-      <a class="text" href="buscar.html">Buscar</a>
+      <a class="text nav-link" href="#home">Inicio</a>
+      <a class="text nav-link" href="generos.html">GENEROS</a>
+      <a class="text nav-link" href="recomendaciones.html">Recomendaciones</a>
+      <a class="text nav-link" href="buscar.html">Buscar</a>
     </nav>
 
     <main class="text">
@@ -90,10 +92,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        new Splide("#image-carousel").mount();
-      });
-    </script>
   </body>
 </html>

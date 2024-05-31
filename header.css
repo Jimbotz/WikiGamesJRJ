@@ -58,3 +58,9 @@ footer {
 .content {
   margin-bottom: 20px;
 }
+
+.nav-link.active {
+  background-color: var(--bg-color-blue); /* O cualquier color que desees */
+  color: var(--text-color-white);
+  font-weight: bold;
+}
