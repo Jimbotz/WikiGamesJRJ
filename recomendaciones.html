@@ -31,6 +31,17 @@
       max-width: 100%; 
       max-height: 100%;
     }
+    #image-carousel3 {
+      max-width: 1000px; 
+      margin: 0 auto; 
+      text-align: center;
+    }
+    .splide__track img {
+      width: auto;
+      height: auto; 
+      max-width: 100%; 
+      max-height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -60,10 +71,36 @@
       <font size="4">
       <p>¿Buscas buenos gráficos, buenas animaciones, un fotorealismo increíble, puzzles interesantes y una historia impactante?
         Hellblade 2 es la respuesta perfecta, pero no sólo por lo anteriormente preguntado, es uno de los pocos juegos que se conocen
-        que abarcan la condición mental conocidad como psicosis de la manera más realista posible. s
+        que abarcan la condición mental conocida como psicosis de la manera más realista posible. 
+      </p>
+      <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="senua1.jpeg" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="senua.jpeg" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="senua2.jpeg" alt="">
+            </li>
+          </ul>
+        </div>
+      </section>
+      <p>
+        Con ayuda de experiencias personales compartidas y de un psiquiatra, lograron representar la realidad de alguien con psicosis 
+        haciéndote sentir que de verdad hay alguien atrás de tí hablándote, o bueno, varias personas. Haz click
+        <a href="https://www.youtube.com/watch?v=KVBxvlRV0d4">aquí</a> para que contemples un poco del como consiguen darte esa sensación.  
+      </p>
+      <p>
+        Entonces si buscas un experiencia nueva y maravillosa no te olvides de darle una oportunidad, te dejamos a continuación el trailer 
+        para que te interese mucho más en el siguiente <a href="https://www.youtube.com/watch?v=3VYGOkMnGCE">link</a> y también un pequeño 
+        gameplay de un enfrentamiento que tendrás al principio de la historia.
       </p>
     </font>
-      <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+    <iframe width="900" height="700" src="https://www.youtube.com/embed/X_LVSVm2OPc" frameborder="0" allowfullscreen></iframe>
+    <section id="image-carousel2" class="splide" aria-label="Beautiful Images">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
@@ -84,7 +121,7 @@
       <h3>Recomendaciones developer (Rodrigo)</h3>
       <h4>Rocket League</h4>
       <p>Rocket League se a convertido en uno de los juegos de autos mas conocidos al rededor del mundo.</p>
-      <section id="image-carousel2" class="splide" aria-label="Beautiful Images">
+      <section id="image-carousel3" class="splide" aria-label="Beautiful Images">
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
@@ -107,6 +144,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       new Splide('#image-carousel').mount();
       new Splide('#image-carousel2').mount();
+      new Splide('#image-carousel3').mount();
     });
   </script>
 </body>
