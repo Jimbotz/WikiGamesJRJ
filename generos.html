@@ -4,7 +4,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wiki Games Genres</title>
     <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="filter.css" />
+    <link rel="stylesheet" href="styles.css" />
+
     <script src="./routeo.js"></script>
+    <script src="./filter.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
   </head>
   <body>
     <header class="text">
@@ -17,7 +35,7 @@
       <a class="text nav-link" href="recomendaciones.html">Recomendaciones</a>
       <a class="text nav-link" href="buscar.html">Buscar</a>
     </nav>
-
+    <!--
     <main class="text">
       <article>
         <h2>Título del Artículo</h2>
@@ -37,5 +55,38 @@
         <p>Otra sección de contenido para mostrar más información.</p>
       </div>
     </main>
+    -->
+    <div class="content">
+      <h2>Filtrar por género</h2>
+      <div id="genreButtons"></div>
+      <div id="filteredResults" class="games-grid"></div>
+    </div>
+
+    <div id="gameModal" class="modal">
+      <div class="modal-content animate__animated animate__fadeInDown">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <!-- 
+        <img id="modalImage" src="" alt="Game Image" class="modalImg" />
+        -->
+        <section
+          id="image-carousel"
+          class="splide"
+          aria-label="Beautiful Images"
+        >
+          <div class="splide__track">
+            <ul id="carousel-images" class="splide__list">
+              <!-- imgs -->
+            </ul>
+          </div>
+        </section>
+
+        <p id="modalDescription"></p>
+        <div id="modalPlatforms"></div>
+        <!-- Agregar el carrusel aquí -->
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   </body>
 </html>
