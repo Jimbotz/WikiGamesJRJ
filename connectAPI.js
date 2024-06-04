@@ -67,8 +67,7 @@ async function showGameModal(gameId) {
     const screenshots = await screenshotsResponse.json();
 
     document.getElementById("modalTitle").textContent = game.name;
-    document.getElementById("modalDescription").textContent =
-      game.description_raw || "No description available.";
+    document.getElementById("modalDescription").textContent = game.description_raw || "No description available.";
 
     // Obtener y mostrar las plataformas
     const modalPlatforms = document.getElementById("modalPlatforms");

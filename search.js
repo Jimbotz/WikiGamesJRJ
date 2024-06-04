@@ -2,7 +2,16 @@ const apiKey = "28930bc8bbca4bb49c075a2cbfdd5e7c";
 
 document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.getElementById("searchButton");
+  const searchInput = document.getElementById("searchInput");
+
   searchButton.addEventListener("click", searchGames);
+
+  // Detectar la tecla "Enter" en el campo de búsqueda
+  searchInput.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+      searchGames();
+    }
+  });
 });
 
 async function searchGames() {
@@ -118,7 +127,6 @@ async function showGameModal(gameId) {
     window.splideInstance = new Splide("#image-carousel").mount();
 
     modal.style.display = "block";
-
 
   } catch (error) {
     console.error("Error fetching game details:", error);
