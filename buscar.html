@@ -5,8 +5,27 @@
     <title>Wiki Games Search</title>
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="search.css" />
+
     <script src="./routeo.js"></script>
     <script src="./search.js"></script>
+    <script src="./carrusel.js"></script>
+    <script src="./connectAPI.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
   </head>
   <body>
     <header class="text">
@@ -40,14 +59,47 @@
       </div>
     </main>
     -->
-    <main class="text">
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Buscar juegos por nombre..."
-      />
-      <button id="searchButton">Buscar</button>
+    <div class="search-container">
+      <div class="search-box">
+        <input
+          class="s-box"
+          type="text"
+          name="search"
+          id="searchInput"
+          placeholder="Buscar juegos por nombre..."
+        />
+        <button class="s-btn" id="searchButton">
+          <i class="fab fa-searchengin"></i>
+        </button>
+      </div>
       <div id="searchResults" class="games-grid"></div>
-    </main>
+    </div>
+
+    <div id="gameModal" class="modal">
+      <div class="modal-content animate__animated animate__fadeInDown">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <!-- 
+        <img id="modalImage" src="" alt="Game Image" class="modalImg" />
+        -->
+        <section
+          id="image-carousel"
+          class="splide"
+          aria-label="Beautiful Images"
+        >
+          <div class="splide__track">
+            <ul id="carousel-images" class="splide__list">
+              <!-- imgs -->
+            </ul>
+          </div>
+        </section>
+
+        <p id="modalDescription"></p>
+        <div id="modalPlatforms"></div>
+        <!-- Agregar el carrusel aquí -->
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   </body>
 </html>

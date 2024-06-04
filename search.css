@@ -1,0 +1,63 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .search-box {
+    position: relative;
+    background: #ccc;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Añadir espacio entre el buscador y los resultados */
+  }
+  
+  .search-box:hover .s-box {
+    width: 240px;
+    padding: 0 6px;
+  }
+  
+  .search-box:hover .s-btn {
+    background: #fff;
+  }
+  
+  .s-btn {
+    color: var(--bg-color-blue);
+    width: 40px;
+    height: 40px;
+    transition: 1s;
+    border-radius: 50%;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .s-btn i {
+    font-size: 20px;
+  }
+  
+  .s-box {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #19191a;
+    font-size: 16px;
+    transition: 1s;
+    line-height: 40px;
+    width: 0px;
+  }
+  
+  .games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
