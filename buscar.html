@@ -4,7 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wiki Games Search</title>
     <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="./routeo.js"></script>
+    <script src="./search.js"></script>
   </head>
   <body>
     <header class="text">
@@ -17,7 +19,7 @@
       <a class="text nav-link" href="recomendaciones.html">Recomendaciones</a>
       <a class="text nav-link" href="#home">Buscar</a>
     </nav>
-
+    <!-- 
     <main class="text">
       <article>
         <h2>Título del Artículo</h2>
@@ -36,6 +38,16 @@
         <h3>Otra Sección</h3>
         <p>Otra sección de contenido para mostrar más información.</p>
       </div>
+    </main>
+    -->
+    <main class="text">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Buscar juegos por nombre..."
+      />
+      <button id="searchButton">Buscar</button>
+      <div id="searchResults" class="games-grid"></div>
     </main>
   </body>
 </html>
