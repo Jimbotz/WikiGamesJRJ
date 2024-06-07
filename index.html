@@ -35,26 +35,20 @@
       <a class="text nav-link" href="generos.html">GENEROS</a>
       <a class="text nav-link" href="recomendaciones.html">Recomendaciones</a>
       <a class="text nav-link" href="buscar.html">Buscar</a>
+      <a class="text nav-link" href="#" onclick="openMap()">Mapa de Navegación</a>
     </nav>
 
     <main class="text">
       <article>
-        <h2>Título del Artículo</h2>
+        <h2>Bienvenido a nuestra página</h2>
         <p class="content">
-          Este es el contenido de un artículo en nuestra página. Aquí puedes
-          escribir sobre cualquier tema que desees.
+          Encontrarás de cualquier videojuego en esta hermosa página web diseñada por tres estudiantes muy profesionales 
         </p>
+        <p class="content">
+          A continuación puedes ver los juegos más famosos, si te interesa ver las recomendaciones de los desarrolladores ve a al apartado recomendaciones, o si gustas buscar
+        alguno en específico ve al apartado buscar y si sólo necesitas ver por género, ve al apartado genero        </p>
       </article>
 
-      <div class="content">
-        <h3>Sección Adicional</h3>
-        <p>Esta es una sección adicional donde puedes agregar más contenido.</p>
-      </div>
-
-      <div class="content">
-        <h3>Otra Sección</h3>
-        <p>Otra sección de contenido para mostrar más información.</p>
-      </div>
     </main>
 
     <div class="container">
@@ -92,6 +86,40 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-
+    <script>
+      function openMap() {
+        // Crear un elemento de imagen
+        var img = document.createElement('img');
+        img.src = './imgs/mapa.jpeg'; // Ruta de la imagen del mapa de navegación
+    
+        // Establecer estilos para la imagen
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'contain';
+    
+        // Crear un contenedor para la imagen y agregarla al cuerpo del documento
+        var container = document.createElement('div');
+        container.style.position = 'fixed';
+        container.style.top = '0';
+        container.style.left = '0';
+        container.style.width = '100%';
+        container.style.height = '100%';
+        container.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+        container.style.zIndex = '9999';
+        container.style.display = 'flex';
+        container.style.justifyContent = 'center';
+        container.style.alignItems = 'center';
+        container.appendChild(img);
+        
+        // Agregar el contenedor al cuerpo del documento
+        document.body.appendChild(container);
+    
+        // Agregar un manejador de eventos para cerrar el mapa de navegación al hacer clic fuera de la imagen
+        container.addEventListener('click', function() {
+          document.body.removeChild(container);
+        });
+      }
+    </script>
+    
   </body>
 </html>
